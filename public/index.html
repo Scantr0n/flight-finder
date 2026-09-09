@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flight Finder — Best Bang for Your Buck</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Flight Finder</h1>
+    <p class="subtitle">Compare price vs. travel time and find the real best value.</p>
+  </header>
+
+  <form id="search-form">
+    <div class="row">
+      <label>
+        From (airport code)
+        <input type="text" id="origin" placeholder="MSP" maxlength="3" required />
+      </label>
+      <label>
+        To (airport code)
+        <input type="text" id="destination" placeholder="NRT" maxlength="3" required />
+      </label>
+    </div>
+    <div class="row">
+      <label>
+        Depart
+        <input type="date" id="departDate" required />
+      </label>
+      <label>
+        Return (optional)
+        <input type="date" id="returnDate" />
+      </label>
+    </div>
+    <div class="row">
+      <label>
+        Travelers
+        <input type="number" id="adults" min="1" value="1" />
+      </label>
+      <label>
+        Your time is worth ($/hr)
+        <input type="number" id="hourlyValue" min="0" value="30" />
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" id="nonStop" />
+        Nonstop only
+      </label>
+    </div>
+    <button type="submit">Find Best Value</button>
+  </form>
+
+  <div id="status"></div>
+  <div id="results"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
